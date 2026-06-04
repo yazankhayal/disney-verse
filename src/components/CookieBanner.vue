@@ -1,9 +1,10 @@
 <template>
   <Transition name="cookie-slide">
-    <div v-if="showBanner" class="cookie-banner">
+    <div v-if="showBanner" class="cookie-banner"
+    >
       <div
         class="cookie-banner-inner max-w-4xl mx-auto rounded-2xl p-5 md:p-6 flex flex-col md:flex-row items-start md:items-center gap-4"
-        :class="isDark ? '' : ''"
+        :class="isDark ? 'bg-cosmic-950/90' : 'bg-white/90'"
       >
         <!-- Cookie icon + text -->
         <div class="flex items-start gap-4 flex-1">
@@ -22,7 +23,6 @@
               :class="isDark ? 'text-white/60' : 'text-gray-600'"
             >
               We use cookies to enhance your journey through the Disney universe — personalising your experience, remembering your preferences, and sprinkling a little extra magic.
-              <a href="#" class="underline ml-1" :class="isDark ? 'text-star-blue' : 'text-violet-500'">Learn more</a>
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@
           <button
             @click="decline"
             class="font-heading text-xs tracking-widest uppercase px-4 py-2 rounded-xl border transition-all duration-300"
-            :class="isDark ? 'border-white/20 text-white/50 hover:border-white/40 hover:text-white' : 'border-gray-200 text-gray-500 hover:border-gray-300 hover:text-gray-700'"
+            :class="isDark ? 'border-white/50 text-white/80 hover:border-white/40 hover:text-white' : 'border-gray-200 text-gray-800 hover:border-gray-300 hover:text-gray-700'"
           >
             Decline
           </button>
