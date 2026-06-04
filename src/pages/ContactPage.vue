@@ -140,7 +140,7 @@ onUnmounted(() => observer.disconnect())
 const submitted = ref(false)
 const errors = ref({})
 const form = reactive({ name: '', email: '',subject: '', message: '' })
-const API_MASTER_URL = import.meta.env.VITE_API_MASTER_URL || 'http://127.0.0.1:8000/api'
+const API_MASTER_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api'
 
 async function submit() {
   if (!form.name || !form.subject ||  !form.email || !form.message) return
